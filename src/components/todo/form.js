@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
+import useForm from '../hooks/form-hook';
 
 import './form.scss';
 
@@ -21,17 +22,25 @@ import './form.scss';
 //   };
 
 const TodoForm = (props) => {
-  const [item, setItem] = useState({});
+  // const [item, setItem] = useState({});
 
-  const handleInputChange = e => {
-    setItem({ ...item, [e.target.name]: e.target.value });
-  }
-  const handleSubmit = e => {
-    e.preventDefault();
-    e.target.reset();
+  // const handleInputChange = e => {
+  //   setItem({ ...item, [e.target.name]: e.target.value });
+  // }
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   e.target.reset();
+  //   props.handleSubmit(item);
+  //   setItem(item);
+  //   }
+
+  const [handleInputChange, handleSubmit] = useForm(sendItem);
+
+  function sendItem(item){
+    // console.log({item});
+
     props.handleSubmit(item);
-    setItem(item);
-    }
+  };
 
   // render() {
     return (
