@@ -109,7 +109,7 @@ const ToDo = () => {
   return (
     <>
     <div>
-      <header class="todo-header">
+      <header className="todo-header">
       <Navbar variant="light" expand="lg" sticky="top" className="nav-color-todo">        
         <h2>
           To-do List Manager ({list.filter(item => !item.complete).length})
