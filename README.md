@@ -6,6 +6,9 @@
 
 ### Links and Test Objects
 
+- [Front-end on GH-Pages](https://401-advanced-javascript-nathanrcox.github.io/to-do/)
+- [Back-end on Heroku](https://nrc-api-server.herokuapp.com/)
+
 ### Resources
 
 ### Setup
