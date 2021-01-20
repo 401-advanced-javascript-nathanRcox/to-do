@@ -4,7 +4,7 @@ import './list.scss';
 // class TodoList extends React.Component {
 
 const TodoList = (props) => {
-console.log('PROPS:', props);
+// console.log('PROPS:', props);
   // render() {
     return (
       <ul className='list-li'>

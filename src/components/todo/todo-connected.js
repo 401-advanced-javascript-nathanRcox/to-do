@@ -13,7 +13,11 @@ import TodoForm from './form.js';
 import TodoList from './list.js';
 
 
-const todoAPI = 'https://api-js401.herokuapp.com/api/v1/todo';
+// const todoAPI = 'https://api-js401.herokuapp.com/api/v1/todo';
+
+// const todoAPI = 'http://localhost:3001/todo';
+
+const todoAPI = 'https://nrc-api-server.herokuapp.com/todo';
 
 const ToDo = () => {
 
@@ -21,8 +25,6 @@ const ToDo = () => {
 
   const _addItem = (item) => {
     item.due = new Date();
-    // console.log('Item:', item);
-    // console.log('Due Date:', item.due);
     fetch(todoAPI, {
     method: 'post',
     mode: 'cors',
@@ -95,7 +97,9 @@ const ToDo = () => {
       mode: 'cors',
     })
       .then(data => data.json())
-      .then(data => setList(data.results))
+      .then(data => { 
+        console.log('DATA:', data);
+        setList(data)})
       .catch(console.error);
   };
 
@@ -105,7 +109,7 @@ const ToDo = () => {
   useEffect(() => {
     document.title = `To-do List: ${list.filter(item => !item.complete).length}`
   })
-  
+  console.log('LIST:', list);
   return (
     <>
     <div>
