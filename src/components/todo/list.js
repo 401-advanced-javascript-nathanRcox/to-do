@@ -4,10 +4,10 @@ import './list.scss';
 // class TodoList extends React.Component {
 
 const TodoList = (props) => {
-console.log('PROPS:', props);
+// console.log('PROPS:', props);
   // render() {
     return (
-      <ul class='list-li'>
+      <ul className='list-li'>
         {props.list.map(item => (
           <li
             className={`complete-${item.complete.toString()}`}
