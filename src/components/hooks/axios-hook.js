@@ -3,9 +3,9 @@ const axios = require('axios').default;
 
 // const todoAPI = 'https://api-js401.herokuapp.com/api/v1/todo';
 
-const todoAPI = 'http://localhost:3001/todo';
+// const todoAPI = 'http://localhost:3001/todo';
 
-// const todoAPI = 'https://nrc-api-server.herokuapp.com/todo';
+const todoAPI = 'https://nrc-api-server.herokuapp.com/todo';
 
 const useAxios = () => {
   const [list, setList] = useState([]);
