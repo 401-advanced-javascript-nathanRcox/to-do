@@ -36,39 +36,39 @@ const TodoForm = (props) => {
 
   const [handleInputChange, handleSubmit] = useForm(sendItem);
 
-  function sendItem(item){
+  function sendItem(item) {
     // console.log({item});
 
     props.handleSubmit(item);
   };
 
   // render() {
-    return (
-      <div className="form">
-        <h3>Add Item</h3>
-        <form onSubmit={handleSubmit}>
-          <label data-testid="todoItem-all">
-            <span>To Do Item</span>
-            <input
-              name="text"
-              placeholder="Add To Do List Item"
-              onChange={handleInputChange} 
-              data-testid="todoItem"
-              />
-          </label>
-          <label>
-            <span>Difficulty Rating</span>
-            <input defaultValue="1" type="range" min="1" max="5" name="difficulty" onChange={handleInputChange} data-testid="difficulty"/>
-          </label>
-          <label>
-            <span>Assigned To</span>
-            <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange} data-testid="assignee"/>
-          </label>
-          <Button type="submit" data-testid="submit" variant="primary">Add Item</Button>{' '}
-          
-        </form>
-      </div>
-    );
+  return (
+    <div className="form">
+      <h3>Add Item</h3>
+      <form onSubmit={handleSubmit}>
+        <label data-testid="todoItem-all">
+          <span>To Do Item</span>
+          <input
+            name="text"
+            placeholder="Add To Do List Item"
+            onChange={handleInputChange}
+            data-testid="todoItem"
+          />
+        </label>
+        <label>
+          <span>Difficulty Rating</span>
+          <input defaultValue="1" type="range" min="1" max="5" name="difficulty" onChange={handleInputChange} data-testid="difficulty" />
+        </label>
+        <label>
+          <span>Assigned To</span>
+          <input type="text" name="assignee" placeholder="Assigned To" onChange={handleInputChange} data-testid="assignee" />
+        </label>
+        <Button type="submit" data-testid="submit" variant="primary">Add Item</Button>{' '}
+
+      </form>
+    </div>
+  );
   // }
 }
 

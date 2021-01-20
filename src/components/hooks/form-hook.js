@@ -12,11 +12,11 @@ const useForm = (callback) => {
     // console.log({item});
     callback(item); // used to be props.handleSubmit
     setItem(item);
-    }
+  }
 
-    return [
-      handleInputChange,
-      handleSubmit
+  return [
+    handleInputChange,
+    handleSubmit
   ];
 };
 

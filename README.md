@@ -47,18 +47,13 @@
 - [x] Add a new data model for to-do items as noted in the Business Requirements document, and deploy it to Heroku.
 - [x] Use the useEffect() hook to pre-load the to-do items from the API on application start.
 - [x] Replace the current form change/submit handlers with the useForm() custom hook to manage the “Add Item” form.
-- [ ] Create a new custom hook called useAjax() to abstract the API calls. Use this hook in your component to make the calls to the server.
+- [x] Create a new custom hook called useAjax() to abstract the API calls. Use this hook in your component to make the calls to the server.
 - This hook should:
-  - [ ] Accept the URL to the API server, the REST method and, when relevant, the BODY (JSON) of the request.
-  - [ ] Handle CORS settings, content-type, headers and possibly authentication.
-  - [ ] You should use axios to perform the actual AJAX calls.
+  - [x] Accept the URL to the API server, the REST method and, when relevant, the BODY (JSON) of the request.
+  - [x] Handle CORS settings, content-type, headers and possibly authentication.
+  - [x] You should use axios to perform the actual AJAX calls.
 
 #### `.env` requirements (where applicable)
-
-<!-- i.e.
-
-- `PORT` - Port Number
-- `MONGODB_URI` - URL to the running mongo instance/db -->
 
 #### How to initialize/run your application (where applicable)
 
