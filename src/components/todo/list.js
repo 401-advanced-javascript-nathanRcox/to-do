@@ -26,10 +26,13 @@ const TodoList = (props) => {
     setNextList(newPage);
   }
 
-  useEffect(() => {
+  useEffect(() => { 
     calcPages();
-    setNextList(page);
   }, [props])
+
+  useEffect(() => {
+    setNextList(page);
+  }, [props]);
 
     return (
       <>
@@ -40,8 +43,9 @@ const TodoList = (props) => {
             key={item._id}
           >
             <span onClick={() => props.handleComplete(item._id)}>
-            <h5>{item.assignee}:</h5>
-            <h6>{item.text}</h6>
+            <h5>For: {item.assignee}</h5>
+            <h6>Task: {item.text}</h6>
+            <h6>Difficulty: {item.difficulty}</h6>
             </span>
             <button onClick={() => props.delete(item._id)}>[X]</button>
             <button onClick={() => props.edit(item._id)}>[Edit]</button>
