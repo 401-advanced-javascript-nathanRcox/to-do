@@ -53,6 +53,27 @@
   - [x] Handle CORS settings, content-type, headers and possibly authentication.
   - [x] You should use axios to perform the actual AJAX calls.
 
+#### Phase 3 (lab 33) Context API: User & Developer Stories
+
+- [x] As a user, I would like to see my to-do items a few at a time so that I don’t have to wade through them all.
+- [ ] As a user, I would like my default view to only be “Incomplete” Items so that I can quickly determine what I have to do.
+- [ ] As a user, I would like my list sorted by difficulty so that I can more easily prioritize.
+- [ ] As a user, I would like the option to change my default preferences with regards to how many Items I see per page, which items are filtered, and how they are sorted.
+
+- [x] Show a maximum of a certain number of items per screen.
+- [ ] Hide or show completed items in the list.
+- [ ] Sort the items based on any of the keys (i.e. difficulty).
+- [ ] Implement this using context.
+
+- [x] Create a context for managing application settings and provide this at the application level.
+- [ ] Display or hide completed items (boolean).
+- [ ] Number of items to display per screen (number).
+- [ ] Default sort field (string).
+
+- [x] Only display the first n items in the list, where n is the number to display per screen in your context.
+- [x] If you have more than n items in the list, add a button labeled Next that will replace the list with the next n items in the list.
+- [x] If you are past the first n items (i.e. on page 2 or higher), add a button labeled Previous that will replace the list with the previous n items in the list.
+
 #### `.env` requirements (where applicable)
 
 #### How to initialize/run your application (where applicable)
