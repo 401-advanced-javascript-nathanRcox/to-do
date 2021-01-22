@@ -74,6 +74,35 @@
 - [x] If you have more than n items in the list, add a button labeled Next that will replace the list with the next n items in the list.
 - [x] If you are past the first n items (i.e. on page 2 or higher), add a button labeled Previous that will replace the list with the previous n items in the list.
 
+#### Phase 4 (lab 34) `<Login />` and `<Auth />`: User & Developer Stories
+
+- [ ] As a user, I want to provide a way for other users to create new accounts.
+- [ ] As a user, I want to provide a way for all users to login to their account.
+- [ ] As a user, I want to make sure that my to-do items are only viewable to users that have logged in with a valid account.
+- [ ] As a user, I want to ensure that only fellow users that are allowed to “create”, based on their user type, can add new to-do items.
+- [ ] As a user, I want to ensure that only users who are allowed to “update”, based on their user type, may mark to-do items as complete.
+- [ ] As a user, I want to ensure that only users who are allowed to “delete”, based on their user type, may delete new to-do items.
+
+---
+
+- [ ] Provide an account registration screen.
+  - [ ] Requires: Username, Password, Email.
+  - [ ] Optionally: A drop-down to select a user “Role” so that you can easily simulate user types.
+- [ ] Provide an account login screen.
+  - Accepts Username and Password.
+- [ ] On successful login, store the token as a cookie.
+- [ ] If a user returns and has a valid login cookie, bypass the login screen and consider them “Logged In."
+
+- [ ] Implement <Login /> and <Auth /> components with Context.
+- [ ] Link to the Login screen in your main menu.
+- [ ] Hide the entire interface until the user has logged in.
+- [ ] Implement the following RBAC rules:
+  - [ ] Logged-in users with ‘read’ permissions can see the summary/count.
+- [ ] Logged-in users with ‘read’ permissions can see the list of to-do items.
+- [ ] logged-in users with ‘update’ permissions can click the records to mark them as complete.
+- Logged-in users with ‘create’ permissions can create new items.
+- Logged-in users with ‘delete’ permissions can delete items.
+
 #### `.env` requirements (where applicable)
 
 #### How to initialize/run your application (where applicable)

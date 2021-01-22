@@ -26,9 +26,7 @@ const TodoList = (props) => {
     setNextList(newPage);
   }
 
-  useEffect(() => { 
-    calcPages();
-  }, [props])
+  useEffect(calcPages, [props]);
 
   useEffect(() => {
     setNextList(page);
